@@ -740,6 +740,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   transform: translate(-50%, -50%);
 }
 
+#portfolio .row {
+  margin: 3.5%;
+}
 
 #portfolio .box {
   padding: 40px;
@@ -754,6 +757,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
+}
+
+#portfolio .owl-nav,
+#portfolio .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#portfolio .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+#portfolio .owl-dot.active {
+  background-color: #a58823;
 }
 
 /* Testimonials Section

@@ -171,11 +171,13 @@ jQuery(document).ready(function ($) {
   });
 
 
-  // porfolio carousel (uses the Owl Carousel library)
-  $(".clients-carousel").owlCarousel({
+  // portfolio carousel (uses the Owl Carousel library)
+  $(".portfolio-carousel").owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
+    autoWidth: true, // set autoWidth to true
+    margin: 20, // increase margin between items
     responsive: {
       0: {
         items: 2
@@ -186,6 +188,24 @@ jQuery(document).ready(function ($) {
       900: {
         items: 6
       }
+    },
+    onInitialized: function(event) {
+      // Add click event to all images in the carousel
+      $('.owl-item').find('a').click(function() {
+        // Open the clicked image in a new window or tab
+        window.open($(this).attr('href'), '_blank');
+        return false;
+      });
+    },
+    onTranslated: function(event) {
+      // Remove click events from all images in the carousel
+      $('.owl-item').find('a').off('click');
+      // Add click event to images in the current visible items only
+      $('.owl-item.active').find('a').click(function() {
+        // Open the clicked image in a new window or tab
+        window.open($(this).attr('href'), '_blank');
+        return false;
+      });
     }
   });
 
