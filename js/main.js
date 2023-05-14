@@ -176,37 +176,30 @@ jQuery(document).ready(function ($) {
     autoplay: true,
     dots: true,
     loop: true,
-    autoWidth: true, // set autoWidth to true
     margin: 20, // increase margin between items
     responsive: {
       0: {
-        items: 2
-      },
-      768: {
-        items: 4
-      },
-      900: {
-        items: 6
+        items: 1
       }
-    },
-    onInitialized: function(event) {
-      // Add click event to all images in the carousel
-      $('.owl-item').find('a').click(function() {
-        // Open the clicked image in a new window or tab
-        window.open($(this).attr('href'), '_blank');
-        return false;
-      });
-    },
-    onTranslated: function(event) {
-      // Remove click events from all images in the carousel
-      $('.owl-item').find('a').off('click');
-      // Add click event to images in the current visible items only
-      $('.owl-item.active').find('a').click(function() {
-        // Open the clicked image in a new window or tab
-        window.open($(this).attr('href'), '_blank');
-        return false;
-      });
-    }
+      },
+      onInitialized: function(event) {
+    // Add click event to all images in the carousel
+    $('.owl-item').find('a').click(function() {
+      // Open the clicked image in a new window or tab
+      window.open($(this).attr('href'), '_blank');
+      return false;
+    });
+  },
+  onTranslated: function(event) {
+    // Remove click events from all images in the carousel
+    $('.owl-item').find('a').off('click');
+    // Add click event to images in the current visible items only
+    $('.owl-item.active').find('a').click(function() {
+      // Open the clicked image in a new window or tab
+      window.open($(this).attr('href'), '_blank');
+      return false;
+    });
+  }
   });
 
 
