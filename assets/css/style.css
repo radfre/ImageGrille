@@ -801,6 +801,22 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: #a58823;
 }
 
+@media (max-width: 767px) {
+  #portfolio .box .box {
+    margin-bottom: 20px;
+  }
+
+  #portfolio .box .icon {
+    float: none;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  #portfolio .box h4, #services .box p {
+    margin-left: 0;
+    text-align: center;
+  }
+}
 /* Testimonials Section
 --------------------------------*/
 #testimonials {
