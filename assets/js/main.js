@@ -122,41 +122,58 @@
     }
   });
 
-  // Testimonials carousel (uses the Owl Carousel library)
-  $(".testimonials-carousel").owlCarousel({
+
+  // portfolio carousel (uses the Owl Carousel library)
+  $(".portfolio-carousel").owlCarousel({
     autoplay: true,
     dots: true,
     loop: true,
+    margin: 20, // increase margin between items
     responsive: {
       0: {
         items: 1
-      },
-      768: {
-        items: 2
-      },
-      900: {
-        items: 3
       }
+    },
+    onInitialized: function(event) {
+      // Add click event to all images in the carousel
+      $('.owl-item').find('a').click(function() {
+        // Open the clicked image in a new window or tab
+        window.open($(this).attr('href'), '_blank');
+        return false;
+      });
+    },
+    onTranslated: function(event) {
+      // Remove click events from all images in the carousel
+      $('.owl-item').find('a').off('click');
+      // Add click event to images in the current visible items only
+      $('.owl-item.active').find('a').click(function() {
+        // Open the clicked image in a new window or tab
+        window.open($(this).attr('href'), '_blank');
+        return false;
+      });
     }
   });
 
   // Clients carousel (uses the Owl Carousel library)
   $(".clients-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 2
-      },
-      768: {
-        items: 4
-      },
-      900: {
-        items: 6
-      }
+
+
+
+  autoplay: true,
+      dots: true,
+      loop: true,
+      responsive: {
+    0: {
+      items: 2
+    },
+    768: {
+      items: 4
+    },
+    900: {
+      items: 6
     }
-  });
+  }
+});
 
   // Initiate venobox (lightbox feature used in portofilo)
   $(document).ready(function() {

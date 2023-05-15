@@ -761,6 +761,46 @@ body.mobile-nav-active #mobile-nav-toggle {
   transform: translate(-50%, -50%);
 }
 
+
+#portfolio .row {
+  margin: 3%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#portfolio .box {
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
+  background: #fff;
+  transition: 0.4s;
+}
+
+#portfolio .box:hover {
+  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+}
+
+#portfolio .owl-nav,
+#portfolio .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#portfolio .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+#portfolio .owl-dot.active {
+  background-color: #a58823;
+}
+
 /* Testimonials Section
 --------------------------------*/
 #testimonials {
