@@ -782,6 +782,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   -moz-transform: translateY(-10px);
 }
 
+#portfolio .box h4{
+  color: #a58823;
+  font-weight: 700;
+}
+
 #portfolio .owl-nav,
 #portfolio .owl-dots {
   margin-top: 5px;
