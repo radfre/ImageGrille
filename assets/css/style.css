@@ -195,12 +195,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
   margin-bottom: 30px;
   font-size: 64px;
-  font-weight: 700;
+  font-weight: 700; text-shadow: gray 0.1em 0.1em 0.2em
 }
 
 #intro .intro-content h2 span {
   color: #a58823;
-  text-decoration: underline;
+ text-shadow: grey 0.1em 0.1em 0.2em
 }
 
 
@@ -736,6 +736,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin: 0;
   text-transform: capitalize;
   font-weight: 700;
+ text-shadow: black 0.15em 0.15em 0.1em
 }
 
 #portfolio .portfolio-item img {
@@ -879,11 +880,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 
-#testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  border: 4px solid #fff;
-  margin: 0 auto;
+.testimonial-img {
+  margin-top: 3em;
 }
 
 
