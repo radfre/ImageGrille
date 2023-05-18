@@ -194,7 +194,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro .intro-content h2 {
   color: #000;
   margin-bottom: 30px;
-  font-size: 64px;
+  font-size: 90px;
   font-weight: 700; text-shadow: gray 0.1em 0.1em 0.2em
 }
 
@@ -334,7 +334,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #nav-menu-container {
     display: none;
   }
@@ -409,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   #mobile-nav-toggle {
     display: inline;
   }
