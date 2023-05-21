@@ -1170,7 +1170,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .php-email-form input:focus, #contact .php-email-form textarea:focus {
-  background: #a58823;
+  background: #fff3cd;
 }
 
 #contact .php-email-form button[type="submit"] {
