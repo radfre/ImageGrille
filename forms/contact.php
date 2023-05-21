@@ -6,8 +6,10 @@
 * For more info and help: https://bootstrapmade.com/php-email-form/
 */
 
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+
 // Replace contact@example.com with your real receiving email address
-$receiving_email_address = 'schatzalex97@gmail.com';
+$receiving_email_address = 'Office@imagegrille.com';
 
 if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
 include( $php_email_form );
