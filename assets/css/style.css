@@ -184,7 +184,6 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   z-index: 10;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
@@ -192,15 +191,14 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #intro .intro-content h2 {
+  margin-top: 10vh;
   color: #000;
-  margin-bottom: 30px;
-  font-size: 90px;
-  font-weight: 700; text-shadow: gray 0.1em 0.1em 0.2em
+  font-size: 50px;
+  font-weight: 700;
 }
 
 #intro .intro-content h2 span {
   color: #a58823;
- text-shadow: grey 0.1em 0.1em 0.2em
 }
 
 
