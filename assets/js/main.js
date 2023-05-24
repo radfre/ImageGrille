@@ -37,6 +37,20 @@
     items: 1
   });
 
+  // about carousel
+  $("#about-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    margin: 20, // increase margin between items
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  });
+
+
   // Initiate the wowjs animation library
   new WOW().init();
 

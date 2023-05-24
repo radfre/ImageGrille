@@ -539,13 +539,28 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 60px 0 30px 0;
 }
 
+
 #about .about-img {
-  overflow: hidden;
 }
 
-#about .about-img img {
-  margin-left: -15px;
+#about img {
   max-width: 100%;
+  transition: 1s;
+  padding: 30px 0;
+}
+
+#about  .owl-dots {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#about  .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
 }
 
 #about .content h2 {
