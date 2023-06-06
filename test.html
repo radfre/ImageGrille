@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Mosaic</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .image-container {
+            height: 200px;
+            width: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-container img {
+            object-fit: cover;
+            margin: 5px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+        .details-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Image Mosaic</h1>
+    <div class="image-container">
+        <img src="assets/img/portfolio/CGW/CGW-RUF-3-PerEle07.jpg" alt="Image 1" data-details="Details 1">
+        <img src="assets/img/portfolio/CGW/CGW-MCMV-01.jpg" alt="Image 2" data-details="Details 2">
+        <img src="assets/img/portfolio/CGW/MCM4-07st.jpg" alt="Image 3" data-details="Details 3">
+        <!-- Add more images here -->
+    </div>
+    <div class="details-container">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Details</h5>
+                <p class="card-text" id="details-text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.image-container img').click(function() {
+            var details = $(this).data('details');
+            $('#details-text').text(details);
+            $('.details-container').fadeIn();
+        });
+
+        $(document).click(function(event) {
+            if (!$(event.target).closest('.image-container img, .details-container').length) {
+                $('.details-container').fadeOut();
+            }
+        });
+    });
+</script>
+</body>
+</html>

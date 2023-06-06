@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #intro .intro-content h2 {
-    margin-top: 15vh;
+    margin-top: 10vh;
     color: #000;
     font-size: 60px;
     font-weight: 600;
@@ -238,13 +238,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro .intro-content .btn-projects {
-    background: #a58823;
-    border: 2px solid #a58823;
+    background:#947a1f;
+    border: 2px solid #947a1f;
 }
 
 #intro .intro-content .btn-projects:hover {
     background: none;
-    color: #a58823;
+    color: #947a1f;
 }
 
 #intro #intro-carousel {
