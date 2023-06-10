@@ -529,9 +529,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin: 15px 15px;
 }
 
-#mosiac img{
-}
-
 
 ul {
     list-style: none;
@@ -588,14 +585,19 @@ ul {
 
 /* hover */
 .image-item:hover .overlay {
-    transform: scale(1);
+    transform: scale(1.01);
 }
 
+.image-item:hover img {
+    transform: scale(1.01);
+
+    transition: all 0.2s 0.1s ease-in-out;
+}
 
 
 /* hover */
 .image-gallery li:hover .overlay {
-    transform: scale(1);
+    transform: scale(1.1);
 }
 /* About Section
 --------------------------------*/
