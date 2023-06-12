@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-    background: grey;
+    background: white;
     color: #444;
     font-family: "Open Sans", sans-serif;
 }
@@ -34,7 +34,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     margin: 0 0 20px 0;
     padding: 0;
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
 }
 
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro .intro-content .btn-get-started,
 #intro .intro-content .btn-projects {
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -359,7 +359,7 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     display: inline-block;
     color: #555;
-    font-family: "Raleway", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 14px;
     outline: none;
@@ -529,6 +529,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     font-weight: 700;
     position: relative;
     padding-bottom: 20px;
+}
+
+.section-header h2:hover {
+    font-size: 34px;
+    color: #947a1f;
+    transition: 1s;
 }
 
 .section-header h2::before {
