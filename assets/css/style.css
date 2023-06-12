@@ -555,16 +555,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 
 #about .about-img {
+    padding: 0px 30px 0px 0;
 }
 
 #about img {
     max-width: 100%;
     transition: 1s;
     padding: 0;
-    border-radius: 5px;
 }
 
-#about .owl-dots {
+/*#about .owl-dots {
     margin-top: 5px;
     text-align: center;
 }
@@ -586,7 +586,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #about .owl-dot.active {
     background-color: #a58823;
-}
+}*/
 
 #about .content h2 {
     color: #000;
