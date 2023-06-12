@@ -542,7 +542,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #about {
-    padding: 60px 0 30px 0;
+    padding: 30px 0 0px 0;
 }
 
 
@@ -552,9 +552,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about img {
     max-width: 100%;
     transition: 1s;
-    padding: 30px 0;
+    padding: 0px 0;
 }
 
+#about .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+#about .owl-nav,
 #about .owl-dots {
     margin-top: 5px;
     text-align: center;
@@ -567,6 +573,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 12px;
     border-radius: 50%;
     background-color: #ddd;
+}
+
+#about .owl-dot.active {
+    background-color: #a58823;
 }
 
 #about .content h2 {
@@ -804,6 +814,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     transform: translateY(-10px);
     -webkit-transform: translateY(-10px);
     -moz-transform: translateY(-10px);
+}
+#portfolio a:hover{
+    color: black;
 }
 
 #portfolio .box h4 {

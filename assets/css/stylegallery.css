@@ -207,6 +207,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro .intro-content h2 span {
     color: #947a1f;
+    transition: 1s;
 }
 
 

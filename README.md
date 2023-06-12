@@ -19,4 +19,4 @@ visible site here: https://radfre.github.io/ImageGrille/
 * Fix php
 * fix title css overflow
 * spelling?
-* 
+* make give us CAd same hieght as img
