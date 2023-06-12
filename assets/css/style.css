@@ -750,11 +750,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio .portfolio-item h2 {
     color: white;
-    font-size: 24px;
+    font-size: 26px;
     margin: 0;
     text-transform: capitalize;
-    font-weight: 700;
-    text-shadow: black 0.15em 0.15em 0.1em
+    font-weight: 800;
+    text-shadow: black 0.15em 0.15em 0.15em ;
 }
 
 #portfolio .portfolio-item img {
