@@ -181,6 +181,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #EBEBEB;
 }
 
+
 #intro .intro-content {
     position: absolute;
     bottom: 0;
@@ -203,6 +204,7 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: #D6D6D6 0.1em 0.1em 0.1em;
 }
 
+
 #intro .intro-content h2 span {
     color: #947a1f;
 }
@@ -217,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 #intro .intro-content .btn-get-started,
 #intro .intro-content .btn-projects {
     font-family: "Raleway", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
     display: inline-block;
@@ -232,6 +234,9 @@ h1, h2, h3, h4, h5, h6 {
     background: #B0001A;
     border: 2px solid #B0001A;
 }
+
+
+
 
 #intro .intro-content .btn-get-started:hover {
     background: none;
@@ -248,13 +253,33 @@ h1, h2, h3, h4, h5, h6 {
     color: #947a1f;
 }
 
-#intro .asai-logo {
+#intro .logo {
     top: 20px;
    left: 20px;
     width: 300px; /* Adjust the width as needed */
     height: auto; /* Adjust the height as needed */
     z-index: 9999; /* Adjust the z-index to ensure the logo appears above other content if necessary */
 }
+
+
+.cgw {
+    color: #7e0207;
+}
+
+.cgw #intro .intro-content h2 {
+    margin-top: 10vh;
+    color: #7e0207;
+    font-size: 80px;
+    font-weight: 500;
+    text-shadow: #D6D6D6 0.1em 0.1em 0.1em;
+}
+
+
+.cgw #intro .intro-content .btn-get-started {
+    background: #7e0207;
+    border: 2px solid #7e0207;
+}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
