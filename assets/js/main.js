@@ -42,6 +42,7 @@
     autoplay: true,
     dots: true,
     loop: true,
+    animateOut: 'fadeOut',
     margin: 20, // increase margin between items
     responsive: {
       0: {

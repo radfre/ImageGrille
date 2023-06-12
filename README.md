@@ -20,3 +20,4 @@ visible site here: https://radfre.github.io/ImageGrille/
 * fix title css overflow
 * spelling?
 * make give us CAd same hieght as img
+* alternat fade out and slide on about carousel
