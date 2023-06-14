@@ -13,7 +13,7 @@ visible site here: https://radfre.github.io/ImageGrille/
 * give title to all 100+ photos
 * give description  to 100+ photos
 * add links to client slide show
-* 
+* makes files load in dynamically with php
 * 
 ### Fixes:
 * Fix php

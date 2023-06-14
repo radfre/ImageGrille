@@ -178,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 40vh;
     position: relative;
     background-size: cover;
-    background: #EBEBEB;
+    background: white;
 }
 
 
@@ -198,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #intro .intro-content h2 {
     margin-top: 10vh;
-    color: #B0001A;
+    color: #36454F;
     font-size: 60px;
     font-weight: 600;
     text-shadow: #D6D6D6 0.1em 0.1em 0.1em;
@@ -232,8 +232,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #intro .intro-content .btn-get-started {
-    background: #B0001A;
-    border: 2px solid #B0001A;
+    background: #36454F;
+    border: 2px solid #36454F;
 }
 
 
@@ -261,26 +261,6 @@ h1, h2, h3, h4, h5, h6 {
     height: auto; /* Adjust the height as needed */
     z-index: 9999; /* Adjust the z-index to ensure the logo appears above other content if necessary */
 }
-
-
-.cgw {
-    color: #7e0207;
-}
-
-.cgw #intro .intro-content h2 {
-    margin-top: 10vh;
-    color: #7e0207;
-    font-size: 80px;
-    font-weight: 500;
-    text-shadow: #D6D6D6 0.1em 0.1em 0.1em;
-}
-
-
-.cgw #intro .intro-content .btn-get-started {
-    background: #7e0207;
-    border: 2px solid #7e0207;
-}
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
