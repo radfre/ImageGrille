@@ -5,11 +5,13 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>ASAI Illustrations</title>
-    <meta content="Image Grille is a professional graphic design and art reproduction studio, offering a wide range of services from creating digital illustrations to fine art reproductions."
-          name="description">
-    <meta content="Image Grille, Elgin, illustrations, rendering, west chicago, chicago, graphic design, art reproduction, digital illustrations, fine art reproductions, architecture, artchitecture "
-          name="keywords">
+    <title>2d elevation rendering<</title>
+    <meta
+        content="Image Grille is a professional graphic design and art reproduction studio, offering a wide range of services from creating digital illustrations to fine art reproductions."
+        name="description">
+    <meta
+        content="Image Grille, Elgin, illustrations, rendering, west chicago, chicago, graphic design, art reproduction, digital illustrations, fine art reproductions, architecture, artchitecture "
+        name="keywords">
 
     <!-- Favicons -->
     <link href="assets/img/IG-Logo.jpg" rel="icon">
@@ -22,8 +24,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,800;0,900;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Raleway:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
@@ -99,7 +102,7 @@
 
 <section id="intro">
     <div class="intro-content">
-        <h2>American Society of Architectural Illustrators<br><span>Award winning illustrations</span></h2>
+        <h2>2d elevation rendering</span></h2>
 
         <div>
             <a href="https://asai.org/award-winner-gallery" class="btn-get-started scrollto" target="_blank">ASAI</a>
@@ -108,78 +111,58 @@
     </div>
 
 
-    <img src="assets/img/ASAI_PrimaryLogo.png" alt="ASAI Logo" class="logo">
-
 </section><!-- End Intro Section -->
+
 
 <main id="main">
     <!-- =========#mosaic gallery========= -->
-    <section id="mosiac">
-        <!-- heading text -->
+
+    <section id="mosaic">
         <div class="image-gallery">
-            <div class="column">
-                <div class="image-item">
-                    <a href="assets/img/portfolio/ASAI/AIP27-WasCube.jpg" class="venobox"
-                       data-gall="portfolioGallery">
-                        <img src="assets/img/portfolio/ASAI/AIP27-WasCube.jpg" alt="">
-                        <div class="overlay"><span>Image title1</span></div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <a href="assets/img/portfolio/ASAI/R-Schatz-AIP28-3006.jpg" class="venobox"
-                       data-gall="portfolioGallery">
-                        <img src="assets/img/portfolio/ASAI/R-Schatz-AIP28-3006.jpg" alt="">
-                        <div class="overlay"><span>Image title2</span></div>
-                    </a>
-                </div>
-                <div class="image-item">
-                    <a href="assets/img/portfolio/ASAI/5-AIP25-Ohio2-birdseye.jpg" class="venobox"
-                       data-gall="portfolioGallery">
-                        <img src="assets/img/portfolio/ASAI/5-AIP25-Ohio2-birdseye.jpg" alt="">
-                        <div class="overlay"><span>Image title10</span></div>
-                    </a>
-                </div>
-            </div>
+            <?php
+            $directory = 'assets/img/2dArt/';
+            $images = glob($directory . '*.{jpg,jpeg,png,gif}', GLOB_BRACE);
 
-                <div class="column">
-                    <div class="image-item"><a href="assets/img/portfolio/ASAI/AIP18-CGW-Newyorka.jpg" class="venobox" data-gall="portfolioGallery"><img src="assets/img/portfolio/ASAI/AIP18-CGW-Newyorka.jpg" alt=""><div class="overlay"><span>Image title1</span></div></a></div>
-                    <div class="image-item"><a href="assets/img/portfolio/ASAI/AIP23-CGWa000D.jpg" class="venobox" data-gall="portfolioGallery"><img src="assets/img/portfolio/ASAI/AIP23-CGWa000D.jpg" alt=""><div class="overlay"><span>Image title2</span></div></a></div>
-                    <div class="image-item"><a href="assets/img/portfolio/ASAI/SCHA-R-aip29-01.jpg" class="venobox" data-gall="portfolioGallery"><img src="assets/img/portfolio/ASAI/SCHA-R-aip29-01.jpg" alt=""><div class="overlay"><span>Image title10</span></div></a></div>
-                </div>
+            if (count($images) > 0) {
 
-                    <div class="column">
-                        <div class="image-item">
-                            <a href="assets/img/portfolio/ASAI/AIP21-IGsds-CGW-Artchit.jpg" class="venobox"
-                               data-gall="portfolioGallery">
-                                <img src="assets/img/portfolio/ASAI/AIP21-IGsds-CGW-Artchit.jpg" alt="">
-                                <div class="overlay"><span>Image title1</span></div>
-                            </a>
-                        </div>
-                        <div class="image-item">
-                            <a href="assets/img/portfolio/ASAI/SCHA-R-aip31-09.jpg" class="venobox"
-                               data-gall="portfolioGallery">
-                                <img src="assets/img/portfolio/ASAI/SCHA-R-aip31-09.jpg" alt="">
-                                <div class="overlay"><span>Image title2</span></div>
-                            </a>
-                        </div>
-                        <div class="image-item">
-                            <a href="assets/img/portfolio/ASAI/SCHA-R-01.jpg" class="venobox"
-                               data-gall="portfolioGallery">
-                                <img src="assets/img/portfolio/ASAI/SCHA-R-01.jpg" alt="">
-                                <div class="overlay"><span>Image title10</span></div>
-                            </a>
-                        </div>
-                    </div>
+                $i = 0;
+                $num_per_column = 3;
+                foreach ($images as $image) {
 
-                </div>
+                    echo "\n";
+                    if (($i % $num_per_column) == 0) {
+                        if($i != 0){
+                            echo "\t";
+                            echo '</div>'; // Close the column div after every $num_per_column images or at the end
+                        }
+                        echo "\n";
+                        echo '<div class="column">';
+                    }
+
+                    echo '<div class="image-item">';
+                    echo '<a href="' . $image . '" class="venobox" data-gall="portfolioGallery">';
+                    echo '<img src="' . $image . '" alt="' . basename($image) . '">';
+                    echo '</a>';
+                    echo '</div>';
+
+                    if (($i % $num_per_column) == 0) {
 
 
+                    }
+
+                    $i++;
+                }
+                echo '</div>'; // Close the column div after every $num_per_column images or at the end
+
+            } else {
+                echo '<p>No images found in the gallery.</p>';
+            }
+
+            ?>
+        </div>
     </section>
-
     <!-- end mosaic gallery -->
-
-
-</main><!-- End #main -->
+</main>
 
 </div><!--/.sidebar-offcanvas-->
 </div><!--/row-->
