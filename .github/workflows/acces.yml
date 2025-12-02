@@ -14,5 +14,4 @@ jobs:
 
       - name: Run Accessibility Tests
         env:
-          PA11Y_CHROME_ARGS: --no-sandbox
-        run: pa11y https://localhost:3000 --reporter cli --chrome-args="--no-sandbox"
+        run: pa11y https://localhost:3000 --reporter cli 
