@@ -2,14 +2,13 @@ name: CI
 
 on: [push, pull_request]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
     container:
       image: node:20
     steps:
-      - name: Set-Checkout
+      - name: Check out code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -20,7 +19,6 @@ jobs:
           git config --global user.email "schatzalex97@gmail.com"
           git config --global user.name "Pipeline"
           git config --global --add safe.directory /__w/ImageGrille/ImageGrille
-          
           if [ -n "${{ github.head_ref }}" ]; then
             BRANCH_NAME="${{ github.head_ref }}"
           else
@@ -30,9 +28,12 @@ jobs:
           git fetch --all
           git checkout $BRANCH_NAME
 
-        
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - name: Print working directory & contents
+        run: |
+          pwd
+          ls -al
+          ls -al code || echo "No code directory"
+          ls -al code/express-static-app || echo "No express-static-app directory"
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
@@ -60,8 +61,7 @@ jobs:
           cd code/express-static-app
           npm install
           npm install -g lighthouse
-          
-          
+
       - name: Run-Tests
         run: |
           cd code/express-static-app
@@ -73,7 +73,6 @@ jobs:
             --output html \
             --output-path "lighthouse-results/lighthouse-report-${{ github.run_number }}.html" \
             --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage --ignore-certificate-errors --disable-features=IsolateOrigins,site-per-process"
-
 
       - name: Commit Lighthouse report
         run: |
