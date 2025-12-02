@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   accessibility:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04  # <-- the correct place!
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
