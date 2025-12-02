@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --global user.email "schatzalex97@gmail.com"
           git config --global user.name "Pipeline"
-          git config --global --add safe.directory /__w/Radfre/ImageGrille
+          git config --global --add safe.directory /__w/ImageGrille/ImageGrille
           
           if [ -n "${{ github.head_ref }}" ]; then
             BRANCH_NAME="${{ github.head_ref }}"
