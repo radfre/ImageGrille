@@ -16,9 +16,9 @@ jobs:
       - name: Configure Git
         id: get_branch
         run: |
-          git config --global user.email "ahamel@hawk.iit.edu"
+          git config --global user.email "schatzalex97@gmail.com"
           git config --global user.name "Pipeline"
-          git config --global --add safe.directory /__w/spring2025-team12/spring2025-team12
+          git config --global --add safe.directory /__w/ImageGrille/ImageGrille
           
           if [ -n "${{ github.head_ref }}" ]; then
             BRANCH_NAME="${{ github.head_ref }}"
