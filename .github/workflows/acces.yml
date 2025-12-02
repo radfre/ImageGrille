@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   accessibility:
-    runs-on: ubuntu-22.04  # <-- the correct place!
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -13,5 +13,4 @@ jobs:
         run: npm install -g pa11y
 
       - name: Run Accessibility Tests
-        env:
-        run: pa11y https://localhost:3000 --reporter cli 
+        run: pa11y https://localhost:3000 --reporter cli
