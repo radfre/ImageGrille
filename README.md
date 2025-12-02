@@ -2,6 +2,7 @@
 IMAGE Grill Test Website for development before production
 
 visible site here: https://radfre.github.io/ImageGrille/
+
 Lighthouse report: https://radfre.github.io/ImageGrille/lighthouse/lighthouse-report-7.html
 
 ### TODO:
