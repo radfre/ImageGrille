@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: node:20
+    steps:
+      - name: Set-Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Configure Git
+        id: get_branch
+        run: |
+          git config --global user.email "schatzalex97@gmail.com"
+          git config --global user.name "Pipeline"
+          git config --global --add safe.directory /__w/Radfre/ImageGrille
+          
+          if [ -n "${{ github.head_ref }}" ]; then
+            BRANCH_NAME="${{ github.head_ref }}"
+          else
+            BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+          fi      
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          git fetch --all
+          git checkout $BRANCH_NAME
+
+        
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20
+
+      - name: Install Google Chrome Stable
+        run: |
+          echo "Installing Google Chrome Stable..."
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor > /usr/share/keyrings/google-chrome-keyring.gpg
+          echo "deb [signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | tee /etc/apt/sources.list.d/google-chrome.list
+          apt-get update
+          apt-get install -y google-chrome-stable
+          
+          CHROME_BIN=$(which google-chrome-stable || which google-chrome)
+          if [ -z "$CHROME_BIN" ]; then
+            echo "Error: Google Chrome not found!"
+            exit 1
+          fi
+          echo "CHROME_PATH=$CHROME_BIN" >> $GITHUB_ENV
+          echo "CHROME_PATH is set to: $CHROME_BIN"
+
+      - name: Install dependencies
+        run: |
+          cd code/express-static-app
+          npm install
+          npm install -g lighthouse
+          
+          
+      - name: Run-Tests
+        run: |
+          cd code/express-static-app
+          npm start dev &
+          cd ../..
+          mkdir -p lighthouse-results
+          echo "created lighthouse-results"
+          lighthouse http://localhost:3000 --emulated-form-factor=mobile \
+            --output html \
+            --output-path "lighthouse-results/lighthouse-report-${{ github.run_number }}.html" \
+            --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage --ignore-certificate-errors --disable-features=IsolateOrigins,site-per-process"
+
+
+      - name: Commit Lighthouse report
+        run: |
+          REPORT_NAME="lighthouse-report-${{ github.run_number }}.html"
+          git checkout ${{ env.BRANCH_NAME }}
+          git add "./lighthouse-results/$REPORT_NAME"
+          git commit -m "Add Lighthouse report for run ${{ github.run_number }}"
+          git push origin ${{ env.BRANCH_NAME }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.SECRET_ACTIONS }}
