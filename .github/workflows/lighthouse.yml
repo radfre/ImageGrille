@@ -1,14 +1,12 @@
 name: CI
-
 on: [push, pull_request]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     container:
       image: node:20
     steps:
-      - name: Set-Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -28,16 +26,7 @@ jobs:
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
           git fetch --all
           git checkout $BRANCH_NAME
-
-        
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 20
-
+      
       - name: Install Google Chrome Stable
         run: |
           echo "Installing Google Chrome Stable..."
@@ -53,18 +42,18 @@ jobs:
           fi
           echo "CHROME_PATH=$CHROME_BIN" >> $GITHUB_ENV
           echo "CHROME_PATH is set to: $CHROME_BIN"
-
+          
       - name: Install dependencies
         run: |
           cd code/express-static-app
           npm install
           npm install -g lighthouse
           
-          
       - name: Run-Tests
         run: |
           cd code/express-static-app
           npm start dev &
+          sleep 5
           cd ../..
           mkdir -p lighthouse-results
           echo "created lighthouse-results"
@@ -72,8 +61,7 @@ jobs:
             --output html \
             --output-path "lighthouse-results/lighthouse-report-${{ github.run_number }}.html" \
             --chrome-flags="--headless --no-sandbox --disable-gpu --disable-dev-shm-usage --ignore-certificate-errors --disable-features=IsolateOrigins,site-per-process"
-
-
+            
       - name: Commit Lighthouse report
         run: |
           REPORT_NAME="lighthouse-report-${{ github.run_number }}.html"
