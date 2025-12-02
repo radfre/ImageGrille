@@ -1,0 +1,16 @@
+{
+  "name": "battlenet-90s-tribute",
+  "version": "1.0.0",
+  "description": "A 90s-era Battle.net style tribute site served via Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+
+
